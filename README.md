@@ -15,4 +15,6 @@ result of clicking
 
 ![Error1](https://github.com/AIoT-Consulting/AJAX_Example/blob/main/assets/Screenshot%20Errors_1.png)
 
+![Error1](https://github.com/AIoT-Consulting/AJAX_Example/blob/main/assets/Screenshot%20Errors_2.png).
+
 
