@@ -12,7 +12,8 @@ See images bellow.
 - The first image shows the error appearing in the console<br>
 - The second image shows the location (line 49 of the index file) where the error is occuring.<br>
 - The third and fourth images show the content of two consective XML files (dont worry about the numbers on the webpage being differnt as I've paused debug).<br>
- 
+
+PS: I'm using an "OR" rather then an "AND" in my if statement *** if(xhr.readyState === 0 || xhr.readyState === 4) *** as I have a dedicated server firing the XML file every second, so I want to run this function either way ("UNSENT"  or when "DONE")
 
 ![Error1](https://github.com/AIoT-Consulting/AJAX_Example/blob/main/assets/Screenshot%20Errors_1.png)
 
