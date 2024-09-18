@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>>
+  <head>
+
+  <title>HTTPXMLRequest Test</title>
+
+
+  <style>
+    body {
+      background-color: lightcyan;
+    }
+    h1 {      
+      font-family: 'Times New Roman', Times, serif;
+      text-align:left;
+      color:black;
+      font-size: 50px;
+      padding: 10px 100px;
+      letter-spacing:2px;
+    }
+  </style>
+  </head>
+  
+  <body onload="process(); ">
+    
+  <div>
+    <tr><h1>Water Temp:  <span id="dataTable1"> ...</span><span> &#8451</span></h1>
+        <h1>Max Water Temp:  <span id="dataTable2"> ...</span><span> &#8451</span></h1>
+        <h1>Filter Press:  <span id="dataTable3"> ...</span><span> psi</span></h1>
+        <h1>Air Pump Press:  <span id="dataTable4"> ...</span><span> psi</span></h1>
+    </tr>
+  </div>
+  </body>
+  <script>
+       
+  let xhr = new XMLHttpRequest();
+       
+  <!-- function to handle the XML Data response from the ESP32 Server  -->
+  function response(){
+    var message;
+    var xmlResponse;
+    var xmldoc;
+   
+    <!-- get the xml stream -->
+    xmlResponse=xhr.responseXML;
+             
+    <!-- Water Temp -->
+    xmldoc = xmlResponse.getElementsByTagName("DT");
+    message = xmldoc[0].firstChild.nodeValue;
+    document.getElementById("dataTable1").innerHTML = message;
+    <!-- Max Water Temp -->
+    xmldoc = xmlResponse.getElementsByTagName("DT");
+    message = xmldoc[1].firstChild.nodeValue;
+    document.getElementById("dataTable2").innerHTML = message;
+    <!-- Filter Press -->
+    xmldoc = xmlResponse.getElementsByTagName("DT");
+    message = xmldoc[2].firstChild.nodeValue;
+    document.getElementById("dataTable3").innerHTML = message;
+    <!-- Air Pump Pressure -->
+    xmldoc = xmlResponse.getElementsByTagName("DT");
+    message = xmldoc[3].firstChild.nodeValue;
+    document.getElementById("dataTable4").innerHTML = message;
+  }
+    
+  function process(){     
+    if(xhr.readyState === 0 || xhr.readyState === 4) {
+      xhr.open("GET","xml",true);
+      xhr.onreadystatechange=response;
+      xhr.send();
+    } 
+    <!-- you may have to play with this value, if data is a very large and needs more porcessing time, and hence a longer timeout -->
+    setTimeout("process()", 800);
+  }
+  </script>
+</html>
