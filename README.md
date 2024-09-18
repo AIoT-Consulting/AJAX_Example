@@ -1,7 +1,7 @@
 # Having issues with an error on webpage.
 
 
-![Adjustable Thermostatic Relay Label]https://github.com/AIoT-Consulting/AJAX_Example/blob/main/assets/Screenshot%20Errors_1.png
+![Error](https://github.com/AIoT-Consulting/AJAX_Example/blob/main/assets/Screenshot%20Errors_1.png)
 
 # Description:
 The webpage is actually working well, and the numers are updating correctly as per the frequency of the timeout, but I'm getting an error on the development console which I do not understand.
