@@ -5,7 +5,7 @@
 The webpage is actually working well, and the numers are updating correctly as per the frequency of the timeout, but I'm getting an error on the development console which I do not understand: <br><br>
 Uncaught TypeError: Cannot read properties of null (reading 'getElementsByTagName') at XMLHttpRequest.response ((index):49:26) at process ((index):68:11) at <anonymous>:1:1
 
-I've reviewed my html & script but do not understand what I'm doing wrong. The actual HTML file is also included here, it's called 
+I've reviewed my html & script but do not understand what I'm doing wrong. The actual HTML file is also included here, it's called: HTTPXMLRequest_Test.html
 
 See images bellow.
 - The first image shows the error appearing in the console<br>
