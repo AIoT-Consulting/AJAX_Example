@@ -9,9 +9,10 @@ Uncaught TypeError: Cannot read properties of null (reading 'getElementsByTagNam
 I've reviewed my html & script but do not understand what I'm doing wrong.
 
 See images bellow.
-The first image shows the error appearing in the console
-The second image shows the location (line 49 of the index file) where the error is occuring.
-result of clicking 
+The first image shows the error appearing in the console<br>
+The second image shows the location (line 49 of the index file) where the error is occuring.<br>
+The third and fourth images show the content of two consective XML files (dont worry about the numbers on the webpage being differnt as I've paused debug).<br>
+ 
 
 ![Error1](https://github.com/AIoT-Consulting/AJAX_Example/blob/main/assets/Screenshot%20Errors_1.png)
 
@@ -22,5 +23,5 @@ result of clicking
 ![Error1](https://github.com/AIoT-Consulting/AJAX_Example/blob/main/assets/Screenshot%20Network_3.png).
 
 
-
+Any help in understanding why I'm getting this error would really be appreciated...
 
